@@ -1,0 +1,12 @@
+version: "3.2"
+services:
+  backend:
+    build:
+      context: .
+  frontend:
+    build:
+      context: ./static/users-frontend
+    ports:
+      - 8000:8000
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf
